@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+</head>
+<body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+
+
+<h1 id="ch1">1</h1>
+<button id="btn1">点击</button>
+
+<script>
+
+
+                var done = 'true'
+                var result
+                <!--<img src="images/pic10.jpg" alt="" />-->
+                var list1 =['pic1.jpg','pic2.jpg','pic3.jpg','pic4.jpg','pic5.jpg','pic6.jpg','pic7.jpg','pic8.jpg','pic9.jpg','pic10.jpg']
+                console.log(list1[Math.floor(Math.random()*list1.length)])
+				function change(){
+				$("#ch1").html(Math.ceil(Math.random()*10))
+				    }
+
+
+                $("#btn1").click(function(){
+                    if(done == 'true'){result = setInterval(change,1)
+                    done = 'false'}else{clearInterval(result)
+                    done ='true'}
+
+                    })
+</script>
+
+</body>
+</html>

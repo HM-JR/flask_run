@@ -1,7 +1,8 @@
 from flask import Flask,make_response,render_template
 from flask_restful import Api,Resource
-import json
 from flask_cors import CORS,cross_origin
+import json
+
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/foo": {"origins": "*"}})
@@ -27,4 +28,4 @@ connect.add_resource(return_json,'/h/info')
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',port=5000)

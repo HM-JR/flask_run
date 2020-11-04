@@ -24,12 +24,227 @@
 				    }
 
 
-                $("#btn1").click(function(){
-                    if(done == 'true'){result = setInterval(change,1)
-                    done = 'false'}else{clearInterval(result)
-                    done ='true'}
+                <!--$("#btn1").click(function(){-->
+                    <!--if(done == 'true'){result = setInterval(change,1)-->
+                    <!--done = 'false'}else{clearInterval(result)-->
+                    <!--done ='true'}-->
 
-                    })
+                    <!--})-->
+
+                $('#btn1').click(function(){
+                $.ajax({
+                url:"http://http://10.22.181.115:5012/gateway/db/segmentResult",
+                type:"POST",
+                dataType:"json",
+                data:{
+    "delivery_id": 27,
+    "delivery_name": null,
+    "title_id": 20,
+    "segment_id": 75,
+    "status": "Delivering",
+    "count_total": 94642,
+    "count_segment": 94642,
+    "segment_name": "\u6e38\u620f\u7231\u597d\u8005",
+    "channels": [
+        {
+            "channel_name": "SMS",
+            "channel_select_cnt": 32978,
+            "total_cnt": 79401,
+            "channel_selected": 1,
+            "channel_id": 1,
+            "unit_price": 1,
+            "delimiter": ",",
+            "channel_columns": [
+                {
+                    "column_name": "Email",
+                    "db_column_name": "email",
+                    "column_selected": 1,
+                    "sample": "qallen@gmail.com, darlenechavez@gmail.com, josephbuckley@hotmail.com"
+                },
+                {
+                    "column_name": "Mobile",
+                    "db_column_name": "mobile",
+                    "column_selected": 1,
+                    "sample": "7823557957608, 5627148192632, 5364764905277"
+                },
+                {
+                    "column_name": "Name",
+                    "db_column_name": "full_name",
+                    "column_selected": 1,
+                    "sample": "Christopher Mendoza, Connie Norris, Antonio Cameron"
+                }
+            ],
+            "delimeter_list": [
+                ",",
+                "|"
+            ],
+            "index": 0
+        },
+        {
+            "channel_name": "eDM",
+            "channel_select_cnt": 18796,
+            "total_cnt": 94642,
+            "channel_selected": 1,
+            "channel_id": 2,
+            "unit_price": 2,
+            "delimiter": ",",
+            "channel_columns": [
+                {
+                    "column_name": "Email",
+                    "db_column_name": "email",
+                    "column_selected": 1,
+                    "sample": "qallen@gmail.com, darlenechavez@gmail.com, josephbuckley@hotmail.com"
+                },
+                {
+                    "column_name": "Name",
+                    "db_column_name": "Name",
+                    "column_selected": 0,
+                    "sample": null
+                }
+            ],
+            "delimeter_list": [
+                ",",
+                "|"
+            ],
+            "index": 1
+        },
+        {
+            "channel_name": "WeChat",
+            "channel_select_cnt": 0,
+            "total_cnt": 94642,
+            "channel_selected": 0,
+            "channel_id": 3,
+            "unit_price": 0.01,
+            "delimiter": ",",
+            "channel_columns": [
+                {
+                    "column_name": "OpenID",
+                    "db_column_name": "wechat_openid",
+                    "column_selected": 1,
+                    "sample": "0a41fd909c86d96aebd85ec8c729c336, 421dd60fd040e531fc0e710e829d72bf, 6dd3cd4fe8090992d45f4fd93aba21ca"
+                },
+                {
+                    "column_name": "UnionID",
+                    "db_column_name": "deviceid",
+                    "column_selected": 1,
+                    "sample": "709e9aa044661121201628491afb9ca9, 156e20aea2c6e0eaba12033a528be316, 1786b981bf75a80892393f3e18bd5088"
+                }
+            ],
+            "delimeter_list": [
+                ",",
+                "|"
+            ],
+            "index": 2
+        },
+        {
+            "channel_name": "DSP",
+            "channel_select_cnt": 0,
+            "total_cnt": 0,
+            "channel_selected": 0,
+            "channel_id": 4,
+            "unit_price": 0.01,
+            "delimiter": "|",
+            "channel_columns": [
+                {
+                    "column_name": "CookieID",
+                    "db_column_name": "CookieID",
+                    "column_selected": 1,
+                    "sample": "59f4285d0483d2bc1db205663e04a8ab, bb76c6ef3e9eaa5ae44f4df6ab66a24c, 5d84f1b60c676659682ff7fc99560d0b"
+                },
+                {
+                    "column_name": "Hashed IDFA",
+                    "db_column_name": "Hashed_IDFA",
+                    "column_selected": 1,
+                    "sample": "ebcf0e911cadce2c0c9febd46c5d5767, a4b18a579561dbefff7109bac4d9f820, 715fe2b43346902b32bd421dce04ea86"
+                },
+                {
+                    "column_name": "Hashed IMEI",
+                    "db_column_name": "iemi",
+                    "column_selected": 1,
+                    "sample": "232dc29fda1c862c392573d533f3d206, b35bf560e1b5197d3ea0816b09cc322a, d7774182e88e62d98000c5bb3532344d"
+                }
+            ],
+            "delimeter_list": [
+                ",",
+                "|"
+            ],
+            "index": 3
+        },
+        {
+            "channel_name": "Data Bank",
+            "channel_select_cnt": 0,
+            "total_cnt": 0,
+            "channel_selected": 0,
+            "channel_id": 5,
+            "unit_price": 0.01,
+            "delimiter": "|",
+            "channel_columns": [
+                {
+                    "column_name": "Email",
+                    "db_column_name": "email",
+                    "column_selected": 1,
+                    "sample": "adam03@anderson-goodwin.org, greenrhonda@nguyen.com, robert24@hotmail.com"
+                },
+                {
+                    "column_name": "Hashed Gov ID",
+                    "db_column_name": "Hashed_Go_ID",
+                    "column_selected": 1,
+                    "sample": "4009e923de452c11b12e9fc03c798262, 10bc169f54447f0a3f0df0a7db05dd57, a1bd67fe57136f048e87f094e1a0734b"
+                },
+                {
+                    "column_name": "Hashed IDFA",
+                    "db_column_name": "Hashed_IDFA",
+                    "column_selected": 1,
+                    "sample": "49481d10e74bb05138ac9b0b6c60d01b, c45d9eb538c888c54237554d9698b760, 361aadf86ecb37d6750f9755efc24c19"
+                },
+                {
+                    "column_name": "Hashed IMEI",
+                    "db_column_name": "hashed_iemi",
+                    "column_selected": 1,
+                    "sample": "c6572b1a653d6a2c2be1197a6d81d705, 5233f343d94c443bd2831f4a9adb128a, e62b1fa5f0680962ebbdd933a304c95b"
+                },
+                {
+                    "column_name": "Hashed Mobile",
+                    "db_column_name": "hashed_mobile",
+                    "column_selected": 1,
+                    "sample": "c1693b97827a49737e7b9405f8d88776, 0cdc1b185eb0f8fe3437e53426a7df35, 980f8d62e31e52e9e4467620f1bad6c0"
+                },
+                {
+                    "column_name": "Name",
+                    "db_column_name": "full_name",
+                    "column_selected": 0,
+                    "sample": "Christopher Kelly, Destiny Stewart, Pamela Thomas"
+                },
+                {
+                    "column_name": "TaobaoID",
+                    "db_column_name": "taobao_id",
+                    "column_selected": 0,
+                    "sample": "0ebaf8f75cbcd0ed80fc1727e17e1603, b12aea5ff3b296fbf16a86d05ffd6010, bd581dafb52b52bf237a309460922380"
+                },
+                {
+                    "column_name": "WeiboID",
+                    "db_column_name": "deviceid",
+                    "column_selected": 0,
+                    "sample": "9c2a848681a1454229564f3350f60314, e3655edc11297803a1dfae3c909e2e5e, 79d180bf9500c03d9b9db51e735a205f"
+                }
+            ],
+            "delimeter_list": [
+                ",",
+                "|"
+            ],
+            "index": 4
+        }
+    ],
+    "uid": "chdu",
+    "total_selected_cnt": 94642
+}
+                Content-Type: "application/json",
+                success:function(data){console.log(data)}
+                })
+
+
+
+                })
 </script>
 
 </body>

@@ -43,10 +43,11 @@
 											by ALex luo</h1>
 											<p id = 'info1'>一个自娱自乐得小flask 项目</p>
 										</header>
-										<p id = 'info2'>采取此页面作为模板，取自模板之家，右侧已更改为定时器，随机播放博图，实现出现啥吃啥得功能</p>
+										<p id = 'info2'>flask的个人练习项目，采用flask实现前后端分离（半分离，实际上用的是同一个服务器，只是数据分离）</p>
 										<ul class="actions">
 											<button id="btn1">点击</button>
 											<li><a href="#" class="button big">Learn More</a></li>
+											<input type="hidden" id="data" value="" />
 										</ul>
 									</div>
 									<span id = 'change' class="image object">
@@ -56,55 +57,77 @@
 							<script>
 							var done = 'true'
                 			var result
-                			var list1 =['pic01.jpg','pic02.jpg','pic03.jpg','pic04.jpg','pic05.jpg','pic06.jpg','pic07.jpg','pic08.jpg','pic09.jpg','pic10.jpg']
+                			<!--var list1 =['pic01.jpg','pic02.jpg','pic03.jpg','pic04.jpg','pic05.jpg','pic06.jpg','pic07.jpg','pic08.jpg','pic09.jpg','pic10.jpg']-->
+
+
+
+
+							<!--$("#btn1").click(function(){-->
+								<!--if(done == 'true'){result = setInterval(change,100)-->
+									<!--done = 'false'}else{clearInterval(result)-->
+								<!--done ='true'}-->
+
+								<!--})-->
+
+
+							$('#btn1').click(function(){
+							if(done == 'true'){
+							$.ajax({
+							url:"http://127.0.0.1:5000/h/info",
+							type:"GET",
+							dataType:"json",
+							ContentType:"application/json",
+							async:false,
+							success:function(data){ $("#data").val(data.data)
+
+							}
+							})
+							var list1 = $("#data").val().split(',')
+							result = setInterval(change,100)
+							<!--console.log(list1)-->
+							done = 'false'
+							}else{clearInterval(result)
+								done ='true'}
 
 							function change(){
 								html_text='<img  src="/static/images/' + list1[Math.floor(Math.random()*list1.length)] + '" alt="" />'
 								console.log(html_text)
 								$("#change").html(html_text)
 				    			}
-
-
-							$("#btn1").click(function(){
-								if(done == 'true'){result = setInterval(change,100)
-									done = 'false'}else{clearInterval(result)
-								done ='true'}
-
-								})
-
+							})
 							</script>
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Erat lacinia</h2>
+										<h2>待添加。。。。。。。</h2>
 									</header>
 									<div class="features">
 										<article>
 											<span class="icon fa-gem"></span>
 											<div class="content">
-												<h3>Portitor ullamcorper</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												<h3>待添加。。。。。。。</h3>
+												<p>待添加。。。。。。。</p>
 											</div>
 										</article>
 										<article>
 											<span class="icon solid fa-paper-plane"></span>
 											<div class="content">
-												<h3>Sapien veroeros</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												<h3>待添加。。。。。。。</h3>
+												<p>待添加。。。。。。。</p>
 											</div>
 										</article>
 										<article>
 											<span class="icon solid fa-rocket"></span>
 											<div class="content">
-												<h3>Quam lorem ipsum</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												<h3>待添加。。。。。。。</h3>
+												<p>待添加。。。。。。。</p>
 											</div>
 										</article>
 										<article>
 											<span class="icon solid fa-signal"></span>
 											<div class="content">
-												<h3>Sed magna finibus</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												<h3>待添加。。。。。。。</h3>
+												<p>待添加。。。。。。。</p>
 											</div>
 										</article>
 									</div>
@@ -113,53 +136,53 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Ipsum sed dolor</h2>
+										<h2>待添加。。。。。。。</h2>
 									</header>
 									<div class="posts">
 										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>Interdum aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<a href="#" class="image"><img src="/static/images/pic01.jpg" alt="" /></a>
+											<h3>待添加。。。。。。。</h3>
+											<p>待添加。。。。。。。</p>
 											<ul class="actions">
 												<li><a href="#" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<h3>Nulla amet dolore</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<a href="#" class="image"><img src="/static/images/pic02.jpg" alt="" /></a>
+											<h3>待添加。。。。。。。</h3>
+											<p>待添加。。。。。。。</p>
 											<ul class="actions">
 												<li><a href="#" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<h3>Tempus ullamcorper</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<a href="#" class="image"><img src="/static/images/pic03.jpg" alt="" /></a>
+											<h3>待添加。。。。。。。</h3>
+											<p>待添加。。。。。。。</p>
 											<ul class="actions">
 												<li><a href="#" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<a href="#" class="image"><img src="/static/images/pic04.jpg" alt="" /></a>
+											<h3>待添加。。。。。。。</h3>
+											<p>待添加。。。。。。。</p>
 											<ul class="actions">
 												<li><a href="#" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Feugiat lorem aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<a href="#" class="image"><img src="/static/images/pic05.jpg" alt="" /></a>
+											<h3>待添加。。。。。。。</h3>
+											<p>待添加。。。。。。。</p>
 											<ul class="actions">
 												<li><a href="#" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<a href="#" class="image"><img src="/static/images/pic06.jpg" alt="" /></a>
+											<h3>待添加。。。。。。。</h3>
+											<p>待添加。。。。。。。</p>
 											<ul class="actions">
 												<li><a href="#" class="button">More</a></li>
 											</ul>
@@ -223,15 +246,15 @@
 									</header>
 									<div class="mini-posts">
 										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/static/images/pic07.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/static/images/pic08.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/static/images/pic09.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
 										</article>
 									</div>

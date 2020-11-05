@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../')
 # 导入配置信息
 with open('./config.ini','r') as f:
     config = eval(f.read())

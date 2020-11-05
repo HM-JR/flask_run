@@ -1,12 +1,10 @@
+import sys
+sys.path.append('../')
 import pymysql
 from run import app
 from flask_sqlalchemy import SQLAlchemy
 from tools.config import db_config
 pymysql.install_as_MySQLdb()
-SQLALCHEMY_DATABASE_URL = 'mysql + pymysql://ljr:123456@192.168.2.219:3306/dataljr'
-SQLALCHEMY_TRACK_MODIFICATIONS = True
-
-
 
 
 

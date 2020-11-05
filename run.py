@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../')
 from flask import Flask,make_response,render_template
 from flask_restful import Api,Resource
 from flask_cors import CORS,cross_origin

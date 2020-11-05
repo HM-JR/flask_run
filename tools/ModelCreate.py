@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../')
 from tools.Fmodel import db
 
 class user(db.Model):

@@ -26,6 +26,10 @@
     # filter(not_()) 条件相反
 
 字段类型
+
+
+---|:--:|---:
+
 类型名 | python中类型 | 说明
 Integer | int | 普通整数，一般是32位
 SmallInteger | int | 取值范围小的整数，一般是16位

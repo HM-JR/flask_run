@@ -9,6 +9,7 @@
 
 使用类直接操作数据库
 -- ----------------------------------------------
+    关于使用model操作数据库的一些方法
     # 插入一条角色数据
     # role1 = user(users='admin',password='adminadmin')
     # db.session.add(role1) 添加一条数据
@@ -25,13 +26,12 @@
     # filter(or_(,)) 条件或
     # filter(not_()) 条件相反
 
-字段类型
 
+对应的在mysql数据库字段类型
 
+类型名|python中类型|说明
 ---|:--:|---:
-
-类型名 | python中类型 | 说明
-Integer | int | 普通整数，一般是32位
+Integer|int|普通整数，一般是32位
 SmallInteger | int | 取值范围小的整数，一般是16位
 BigInteger |int或long | 不限制精度的整数
 Float | float | 浮点数

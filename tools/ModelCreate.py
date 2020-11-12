@@ -1,6 +1,15 @@
-import sys
+import sys,os
 sys.path.append('../')
 from tools.Fmodel import db
+import logging
+logdir = './log'
+try:
+    os.mkdir(logdir)
+except Exception as e:
+    pass
+
+
+
 
 class user(db.Model):
     # 定义表名

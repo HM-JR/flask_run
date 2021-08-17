@@ -6,6 +6,10 @@ jobs:
   example-ngrok-kind-v2:
     runs-on: ubuntu-latest
     steps:
+    
+      - name: SSH connection to Actions (cd openwrt && make menuconfig)
+        uses: P3TERX/ssh2actions@v1.0.0
+      
       - uses: shaowenchen/debugger-action@v2
         name: debugger
         timeout-minutes: 300
